@@ -1,0 +1,71 @@
+/* General styles for all devices */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Ensures content wraps on smaller screens */
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Centers the container */
+}
+
+/* Text section styling */
+.text-content {
+    flex: 1 1 50%; /* Takes 50% width on larger screens */
+    padding: 20px;
+}
+
+.text-content h1 {
+    font-size: 2rem;
+}
+
+.text-content p {
+    font-size: 1rem;
+}
+
+/* Image section styling */
+.image-content {
+    flex: 1 1 50%; /* Takes 50% width on larger screens */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.image-content img {
+    max-width: 100%; /* Ensures image scales with the container */
+    height: auto;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .text-content,
+    .image-content {
+        flex: 1 1 100%; /* Takes full width on smaller screens */
+        text-align: center; /* Center-align text and image */
+    }
+
+    .text-content h1 {
+        font-size: 1.5rem; /* Adjust heading size for smaller screens */
+    }
+
+    .text-content p {
+        font-size: 0.9rem; /* Adjust paragraph size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .text-content h1 {
+        font-size: 1.2rem;
+    }
+
+    .text-content p {
+        font-size: 0.8rem;
+    }
+}
